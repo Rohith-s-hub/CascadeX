@@ -184,7 +184,7 @@ function SSOButton({ provider }: { provider: "google" | "github" }) {
   const label = provider === "google" ? "Google" : "GitHub";
 
   const handleOAuth = () => {
-    window.location.href = `/api/auth/oauth/${provider}/`;
+    window.location.href = `${import.meta.env.VITE_API_BASE_URL || ""}/api/auth/oauth/${provider}/`;
   };
 
   return (
