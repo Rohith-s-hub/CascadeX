@@ -535,7 +535,7 @@ interface IntegrationConfigRecord {
 // CONSTANTS
 // ═══════════════════════════════════════════════════════════════
 
-const API_BASE_URL = "/api/simulation";
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "") + "/api/simulation";
 const LIVE_REFRESH_INTERVAL = 60000;
 const ALERT_POLL_INTERVAL = 60000; // 1 minute
 const MONITOR_POLL_INTERVAL = 60000; // 1 minute
